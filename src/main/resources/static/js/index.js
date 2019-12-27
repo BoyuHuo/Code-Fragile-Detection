@@ -40,25 +40,28 @@ function codeDetect() {
                     let tdFileName = "<td> " + fileName + "</td>";
                     let tdFilePath = "<td>" + key + "</td>";
                     let tdValue = "<td>" + value + "</td>"
-                    let tdRisk ="Safe";
+                    let tdRisk = "Safe";
                     let value_float = parseFloat(value);
                     if (value_float <= 0.5) {
                         tdRisk = "High";
-                    }else if(value_float <=0.7){
-                        tdRisk ="Medium";
-                    }else{
-                        tdRisk ="Low";
+                    } else if (value_float <= 0.7) {
+                        tdRisk = "Medium";
+                    } else {
+                        tdRisk = "Low";
                     }
 
-                    tr+=tdFileName;
-                    tr+=tdFilePath;
-                    tr+=tdRisk;
-                    tr+=tdValue;
-                    tr+="</tr>";
+                    tr += tdFileName;
+                    tr += tdFilePath;
+                    tr += tdRisk;
+                    tr += tdValue;
+                    tr += "</tr>";
 
                     resultBody.append(tr);
                 });
             })
+        },
+        error: function (data) {
+            alert(data.error);
         },
         complete: function (XMLHttpRequest, textStatus) {
             $("#Loading").hide();
