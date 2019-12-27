@@ -60,7 +60,7 @@
                         </ul>
                         <ul class="navbar-nav ml-auto mt-10">
                             <li class="nav-item">
-                                <a class="nav-link add-button" href="#"><i class="fa fa-plus-circle"></i> OCDL Repo</a>
+                                <a class="nav-link btn-success" href="#"><i class="fa fa-github"></i> OCDL Repo</a>
                             </li>
                         </ul>
                     </div>
@@ -113,29 +113,33 @@
                                            placeholder="Git Address">
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-12">
+                            <div class="col-lg-6 col-md-12" style="margin-top: 5px">
                                 <div class="block d-flex">
                                     <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="branch"
                                            placeholder="Branch">
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-12">
+                            <div class="col-lg-6 col-md-12" style="margin-top: 5px">
                                 <div class="block d-flex">
                                     <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0 " id="code-ur"
                                            placeholder="Dir Relative Path">
 
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-12">
-                                <div class="block d-flex">
-                                    <!-- Search Button -->
-                                    <button class="btn btn-main" onclick="codeDetect()">Detect</button>
+
+
+                            <div class="col-lg-6 col-md-12" id="Loading" style="margin-top: 5px">
+                                <div style="display:none">
+                                    <img src="images/ajax-loader.gif" alt="loading">
                                 </div>
                             </div>
-
-                            <div class="col-lg-6 col-md-12" id="Loading" style="display: none">
-                                <div>
-                                    <img src="images/ajax-loader.gif" alt="loading">
+                            <div class="col-lg-6 col-md-12" style="margin-top: 5px">
+                                <div class="block">
+                                    <!-- Search Button -->
+                                    <button class="btn btn-info"
+                                            style="float:right; height: 50px; border-radius: 0rem; "
+                                            onclick="codeDetect()"><i class="fa fa-search"></i> Detect
+                                    </button>
                                 </div>
                             </div>
 
@@ -168,13 +172,13 @@
                     <h2>Result</h2>
                 </div>
                 <div class="row">
-                    <table id="result-table" class="table table-responsive product-dashboard-table">
+                    <table id="result-table"  class="table product-dashboard-table col-md-12">
                         <thead>
                         <tr>
                             <th>File Name</th>
                             <th>File Path</th>
-                            <th class="text-center">Risk</th>
-                            <th class="text-center">Value</th>
+                            <th >Risk</th>
+                            <th>Value</th>
                         </tr>
                         </thead>
                         <tbody id="result-body">
@@ -183,12 +187,9 @@
                             <td class="">
                                 <h3>test.java</h3></td>
                             <td class="details">
-                                <span class="add-id"><strong>Ad ID:</strong> ng3D5hAMHPajQrM</span>
-                                <span><strong>Posted on: </strong><time>Jun 27, 2017</time> </span>
-                                <span class="status active"><strong>Status</strong>Active</span>
-                                <span class="location"><strong>Location</strong>Dhaka,Bangladesh</span>
+                                g3D5hAMHPajQrM
                             </td>
-                            <td class=""><span class="categories">Laptops</span></td>
+                            <td class=""><span class="categories">Safe</span></td>
                             <td class="" data-title="Action">
                                 1
                             </td>
