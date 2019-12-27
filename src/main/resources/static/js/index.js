@@ -33,7 +33,7 @@ function codeDetect() {
                 var resultBody = $("#result-body");
                 resultBody.clear();
 
-                $.each(data, function (key, value) {
+                $.each(data["data"], function (key, value) {
                     let tr = "<tr>";
                     let keyStr = key.split("/");
                     let fileName = keyStr[keyStr.length - 1];
