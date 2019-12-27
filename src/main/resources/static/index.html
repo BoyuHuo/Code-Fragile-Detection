@@ -99,22 +99,22 @@
 							<!-- Store Search -->
 							<div class="col-lg-6 col-md-12">
 								<div class="block d-flex">
-									<input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="search" placeholder="Project Name">
+									<input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="project-name" placeholder="Project Name">
 								</div>
 							</div>
 							<div class="col-lg-6 col-md-12">
 								<div class="block d-flex">
-									<input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="search" placeholder="Git Address">
+									<input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="git-url" placeholder="Git Address">
 								</div>
 							</div>
 							<div class="col-lg-6 col-md-12">
 								<div class="block d-flex">
-									<input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="search" placeholder="Branch">
+									<input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="branch" placeholder="Branch">
 								</div>
 							</div>
 							<div class="col-lg-6 col-md-12">
 								<div class="block d-flex">
-									<input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0 " id="search" placeholder="Dir Relative Path">
+									<input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0 " id="code-ur" placeholder="Dir Relative Path">
 
 								</div>
 							</div>
@@ -125,7 +125,11 @@
 								</div>
 							</div>
 
-
+							<div class="col-lg-6 col-md-12" id="Loading" style="display: none">
+								<div>
+									<img src="images/ajax-loader.gif" alt="loading">
+								</div>
+							</div>
 
 						</div>
 					</form>
@@ -156,7 +160,7 @@
 					<h2>Result</h2>
 				</div>
 				<div class="row">
-					<table class="table table-responsive product-dashboard-table">
+					<table id="result-table" class="table table-responsive product-dashboard-table">
 						<thead>
 						<tr>
 							<th>File Name</th>
@@ -165,160 +169,20 @@
 							<th class="text-center">Value</th>
 						</tr>
 						</thead>
-						<tbody>
+						<tbody id="result-body">
 						<tr>
 
-							<td class="product-thumb">
+							<td class="">
 								<h3>test.java</h3></td>
-							<td class="product-details">
+							<td class="details">
 								<span class="add-id"><strong>Ad ID:</strong> ng3D5hAMHPajQrM</span>
 								<span><strong>Posted on: </strong><time>Jun 27, 2017</time> </span>
 								<span class="status active"><strong>Status</strong>Active</span>
 								<span class="location"><strong>Location</strong>Dhaka,Bangladesh</span>
 							</td>
-							<td class="product-category"><span class="categories">Laptops</span></td>
-							<td class="action" data-title="Action">
-								<div class="">
-									<ul class="list-inline justify-content-center">
-										<li class="list-inline-item">
-											<a data-toggle="tooltip" data-placement="top" title="Tooltip on top" class="view" href="">
-												<i class="fa fa-eye"></i>
-											</a>
-										</li>
-										<li class="list-inline-item">
-											<a class="edit" href="">
-												<i class="fa fa-pencil"></i>
-											</a>
-										</li>
-										<li class="list-inline-item">
-											<a class="delete" href="">
-												<i class="fa fa-trash"></i>
-											</a>
-										</li>
-									</ul>
-								</div>
-							</td>
-						</tr>
-						<tr>
-
-							<td class="product-thumb">
-								<h3 class="title">Study Table Combo</h3>
-							<td class="product-details">
-								<span class="add-id">ng3D5hAMHPajQrM</span>
-							</td>
-							<td class="product-category"><span class="categories">Laptops</span></td>
-							<td class="action" data-title="Action">
-								<div class="">
-									<ul class="list-inline justify-content-center">
-										<li class="list-inline-item">
-											<a data-toggle="tooltip" data-placement="top" title="Tooltip on top" class="view" href="">
-												<i class="fa fa-eye"></i>
-											</a>
-										</li>
-										<li class="list-inline-item">
-											<a class="edit" href="">
-												<i class="fa fa-pencil"></i>
-											</a>
-										</li>
-										<li class="list-inline-item">
-											<a class="delete" href="">
-												<i class="fa fa-trash"></i>
-											</a>
-										</li>
-									</ul>
-								</div>
-							</td>
-						</tr>
-						<tr>
-
-							<td class="product-thumb">
-								<h3 class="title">Study Table Combo</h3>
-							</td>
-							<td class="product-details">
-								<span class="add-id">ng3D5hAMHPajQrM</span>
-							</td>
-							<td class="product-category"><span class="categories">Laptops</span></td>
-							<td class="action" data-title="Action">
-								<div class="">
-									<ul class="list-inline justify-content-center">
-										<li class="list-inline-item">
-											<a data-toggle="tooltip" data-placement="top" title="Tooltip on top" class="view" href="">
-												<i class="fa fa-eye"></i>
-											</a>
-										</li>
-										<li class="list-inline-item">
-											<a class="edit" href="">
-												<i class="fa fa-pencil"></i>
-											</a>
-										</li>
-										<li class="list-inline-item">
-											<a class="delete" href="">
-												<i class="fa fa-trash"></i>
-											</a>
-										</li>
-									</ul>
-								</div>
-							</td>
-						</tr>
-						<tr>
-
-							<td class="product-thumb">
-								<h3 class="title">Macbook Pro 15inch</h3>
-							<td class="product-details">
-								<span class="add-id">ng3D5hAMHPajQrM</span>
-							</td>
-							<td class="product-category"><span class="categories">Laptops</span></td>
-							<td class="action" data-title="Action">
-								<div class="">
-									<ul class="list-inline justify-content-center">
-										<li class="list-inline-item">
-											<a data-toggle="tooltip" data-placement="top" title="Tooltip on top" class="view" href="">
-												<i class="fa fa-eye"></i>
-											</a>
-										</li>
-										<li class="list-inline-item">
-											<a class="edit" href="">
-												<i class="fa fa-pencil"></i>
-											</a>
-										</li>
-										<li class="list-inline-item">
-											<a class="delete" href="">
-												<i class="fa fa-trash"></i>
-											</a>
-										</li>
-									</ul>
-								</div>
-							</td>
-						</tr>
-						<tr>
-
-							<td class="product-thumb">
-								<h3 class="title">Macbook Pro 15inch</h3>
-							<td class="product-details">
-
-								<span class="add-id"> ng3D5hAMHPajQrM</span>
-							</td>
-							<td class="product-category"><span class="categories">Laptops</span></td>
-							<td class="action" data-title="Action">
-								<div class="">
-									<ul class="list-inline justify-content-center">
-										<li class="list-inline-item">
-											<a data-toggle="tooltip" data-placement="top" title="Tooltip on top" class="view" href="">
-												<i class="fa fa-eye"></i>
-											</a>
-										</li>
-										<li class="list-inline-item">
-											<a class="edit" href="">
-												<i class="fa fa-pencil"></i>
-											</a>
-										</li>
-										<li class="list-inline-item">
-											<a class="delete" href="">
-												<i class="fa fa-trash"></i>
-											</a>
-										</li>
-									</ul>
-								</div>
+							<td class=""><span class="categories">Laptops</span></td>
+							<td class="" data-title="Action">
+								1
 							</td>
 						</tr>
 						</tbody>
