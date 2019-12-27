@@ -32,7 +32,7 @@ public class Client {
     logger.info("Client is running....");
 
     // run consumer in a separated thread
-    Client client = this;
+    /*Client client = this;
 
     (new Thread(
             new Runnable() {
@@ -42,7 +42,7 @@ public class Client {
                 consumer.run(client);
               }
             }))
-        .start();
+        .start();*/
   }
 
   public void downloadModel(String msg) {
