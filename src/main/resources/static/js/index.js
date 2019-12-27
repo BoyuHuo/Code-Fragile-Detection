@@ -15,13 +15,15 @@ function codeDetect() {
 
     $.ajax({
         url: "/rest/vul",
+        type: "POST",
+        contentType: 'application/json',
+        dataType: "json",
         data: JSON.stringify({
             project_name: project_name.val(),
             git_url: git_url.val(),
             branch: branch.val(),
             code_url: code_url.val()
         }),
-        type: "POST",
         beforeSend: function (XMLHttpRequest) {
             $("#Loading").show();
         },
