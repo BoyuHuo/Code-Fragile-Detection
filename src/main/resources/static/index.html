@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- SITE TITTLE -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Code Vulnerability Detection</title>
+
+  <!-- Bootstrap -->
+  <link href="plugins/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <!-- Owl Carousel -->
+  <link href="plugins/slick-carousel/slick/slick.css" rel="stylesheet">
+  <link href="plugins/slick-carousel/slick/slick-theme.css" rel="stylesheet">
+  <!-- Fancy Box -->
+  <link href="plugins/fancybox/jquery.fancybox.pack.css" rel="stylesheet">
+  <link href="plugins/jquery-nice-select/css/nice-select.css" rel="stylesheet">
+  <link href="plugins/seiyria-bootstrap-slider/dist/css/bootstrap-slider.min.css" rel="stylesheet">
+  <!-- CUSTOM CSS -->
+  <link href="css/style.css" rel="stylesheet">
+
+
+</head>
+
+<body class="body-wrapper">
+<section>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<nav class="navbar navbar-expand-lg  navigation">
+					<a class="navbar-brand" href="index.html">
+						<H2>Vulnerability Detector</H2>
+					</a>
+					<a>supported by OCDL</a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="navbar-nav ml-auto main-nav ">
+							<li class="nav-item active">
+								<a class="nav-link" href="index.html">Home</a>
+							</li>
+							<li class="nav-item dropdown dropdown-slide">
+								<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									About
+								</a>
+							</li>
+							<li class="nav-item dropdown dropdown-slide">
+								<a class="nav-link dropdown-toggle" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									Contact
+								</a>
+							</li>
+						</ul>
+						<ul class="navbar-nav ml-auto mt-10">
+							<li class="nav-item">
+								<a class="nav-link add-button" href="#"><i class="fa fa-plus-circle"></i> OCDL Repo</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!--===============================
+=            Hero Area            =
+================================-->
+
+<section class="hero-area bg-1 text-center overly">
+	<!-- Container Start -->
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<!-- Header Contetnt -->
+				<div class="content-block">
+					<h1> Code Vulnerability Detection </h1>
+					<p>Find the code vulnerability and increase the project quality Now!</p>
+					<div class="short-popular-category-list text-center">
+						<h2>Supported Code Source</h2>
+						<ul class="list-inline">
+							<li class="list-inline-item">
+								<a href=""><i class="fa fa-bed"></i> Github</a></li>
+							<li class="list-inline-item">
+								<a href=""><i class="fa fa-grav"></i> Git</a>
+							</li>
+
+						</ul>
+					</div>
+					
+				</div>
+				<!-- Advance Search -->
+				<div class="advance-search">
+					<form action="#">
+						<div class="row">
+							<!-- Store Search -->
+							<div class="col-lg-6 col-md-12">
+								<div class="block d-flex">
+									<input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="search" placeholder="Project Name">
+								</div>
+							</div>
+							<div class="col-lg-6 col-md-12">
+								<div class="block d-flex">
+									<input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="search" placeholder="Git Address">
+								</div>
+							</div>
+							<div class="col-lg-6 col-md-12">
+								<div class="block d-flex">
+									<input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="search" placeholder="Branch">
+								</div>
+							</div>
+							<div class="col-lg-6 col-md-12">
+								<div class="block d-flex">
+									<input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0 " id="search" placeholder="Dir Relative Path">
+
+								</div>
+							</div>
+							<div class="col-lg-6 col-md-12">
+								<div class="block d-flex">
+									<!-- Search Button -->
+									<button class="btn btn-main" >Detect</button>
+								</div>
+							</div>
+
+
+
+						</div>
+					</form>
+					
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	<!-- Container End -->
+</section>
+
+<!--===================================
+=            Client Slider            =
+====================================-->
+
+
+<!--===========================================
+=            Popular deals section            =
+============================================-->
+
+<section class="popular-deals section bg-gray">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<!-- Section title -->
+				<div class="section-title">
+					<h2>Result</h2>
+				</div>
+				<div class="row">
+					<table class="table table-responsive product-dashboard-table">
+						<thead>
+						<tr>
+							<th>File Name</th>
+							<th>File Path</th>
+							<th class="text-center">Risk</th>
+							<th class="text-center">Value</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+
+							<td class="product-thumb">
+								<h3>test.java</h3></td>
+							<td class="product-details">
+								<span class="add-id"><strong>Ad ID:</strong> ng3D5hAMHPajQrM</span>
+								<span><strong>Posted on: </strong><time>Jun 27, 2017</time> </span>
+								<span class="status active"><strong>Status</strong>Active</span>
+								<span class="location"><strong>Location</strong>Dhaka,Bangladesh</span>
+							</td>
+							<td class="product-category"><span class="categories">Laptops</span></td>
+							<td class="action" data-title="Action">
+								<div class="">
+									<ul class="list-inline justify-content-center">
+										<li class="list-inline-item">
+											<a data-toggle="tooltip" data-placement="top" title="Tooltip on top" class="view" href="">
+												<i class="fa fa-eye"></i>
+											</a>
+										</li>
+										<li class="list-inline-item">
+											<a class="edit" href="">
+												<i class="fa fa-pencil"></i>
+											</a>
+										</li>
+										<li class="list-inline-item">
+											<a class="delete" href="">
+												<i class="fa fa-trash"></i>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</td>
+						</tr>
+						<tr>
+
+							<td class="product-thumb">
+								<h3 class="title">Study Table Combo</h3>
+							<td class="product-details">
+								<span class="add-id">ng3D5hAMHPajQrM</span>
+							</td>
+							<td class="product-category"><span class="categories">Laptops</span></td>
+							<td class="action" data-title="Action">
+								<div class="">
+									<ul class="list-inline justify-content-center">
+										<li class="list-inline-item">
+											<a data-toggle="tooltip" data-placement="top" title="Tooltip on top" class="view" href="">
+												<i class="fa fa-eye"></i>
+											</a>
+										</li>
+										<li class="list-inline-item">
+											<a class="edit" href="">
+												<i class="fa fa-pencil"></i>
+											</a>
+										</li>
+										<li class="list-inline-item">
+											<a class="delete" href="">
+												<i class="fa fa-trash"></i>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</td>
+						</tr>
+						<tr>
+
+							<td class="product-thumb">
+								<h3 class="title">Study Table Combo</h3>
+							</td>
+							<td class="product-details">
+								<span class="add-id">ng3D5hAMHPajQrM</span>
+							</td>
+							<td class="product-category"><span class="categories">Laptops</span></td>
+							<td class="action" data-title="Action">
+								<div class="">
+									<ul class="list-inline justify-content-center">
+										<li class="list-inline-item">
+											<a data-toggle="tooltip" data-placement="top" title="Tooltip on top" class="view" href="">
+												<i class="fa fa-eye"></i>
+											</a>
+										</li>
+										<li class="list-inline-item">
+											<a class="edit" href="">
+												<i class="fa fa-pencil"></i>
+											</a>
+										</li>
+										<li class="list-inline-item">
+											<a class="delete" href="">
+												<i class="fa fa-trash"></i>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</td>
+						</tr>
+						<tr>
+
+							<td class="product-thumb">
+								<h3 class="title">Macbook Pro 15inch</h3>
+							<td class="product-details">
+								<span class="add-id">ng3D5hAMHPajQrM</span>
+							</td>
+							<td class="product-category"><span class="categories">Laptops</span></td>
+							<td class="action" data-title="Action">
+								<div class="">
+									<ul class="list-inline justify-content-center">
+										<li class="list-inline-item">
+											<a data-toggle="tooltip" data-placement="top" title="Tooltip on top" class="view" href="">
+												<i class="fa fa-eye"></i>
+											</a>
+										</li>
+										<li class="list-inline-item">
+											<a class="edit" href="">
+												<i class="fa fa-pencil"></i>
+											</a>
+										</li>
+										<li class="list-inline-item">
+											<a class="delete" href="">
+												<i class="fa fa-trash"></i>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</td>
+						</tr>
+						<tr>
+
+							<td class="product-thumb">
+								<h3 class="title">Macbook Pro 15inch</h3>
+							<td class="product-details">
+
+								<span class="add-id"> ng3D5hAMHPajQrM</span>
+							</td>
+							<td class="product-category"><span class="categories">Laptops</span></td>
+							<td class="action" data-title="Action">
+								<div class="">
+									<ul class="list-inline justify-content-center">
+										<li class="list-inline-item">
+											<a data-toggle="tooltip" data-placement="top" title="Tooltip on top" class="view" href="">
+												<i class="fa fa-eye"></i>
+											</a>
+										</li>
+										<li class="list-inline-item">
+											<a class="edit" href="">
+												<i class="fa fa-pencil"></i>
+											</a>
+										</li>
+										<li class="list-inline-item">
+											<a class="delete" href="">
+												<i class="fa fa-trash"></i>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</td>
+						</tr>
+						</tbody>
+					</table>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!--============================
+=            Footer            =
+=============================-->
+<!-- Footer Bottom -->
+<footer class="footer-bottom">
+    <!-- Container Start -->
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-12">
+          <!-- Copyright -->
+          <div class="copyright">
+            <p>Copyright © 2019. <a href="https://www.concordia.ca/" style="color: dodgerblue;">Concordia University</a> All Rights Reserved. </p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-12">
+          <!-- Social Icons -->
+          <ul class="social-media-icons text-right">
+              <li><a class="fa fa-facebook" href=""></a></li>
+              <li><a class="fa fa-twitter" href=""></a></li>
+              <li><a class="fa fa-pinterest-p" href=""></a></li>
+              <li><a class="fa fa-vimeo" href=""></a></li>
+            </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Container End -->
+    <!-- To Top -->
+    <div class="top-to">
+      <a id="top" class="" href=""><i class="fa fa-angle-up"></i></a>
+    </div>
+</footer>
+
+  <!-- JAVASCRIPTS -->
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+  <script src="plugins/tether/js/tether.min.js"></script>
+  <script src="plugins/raty/jquery.raty-fa.js"></script>
+  <script src="plugins/bootstrap/dist/js/popper.min.js"></script>
+  <script src="plugins/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="plugins/seiyria-bootstrap-slider/dist/bootstrap-slider.min.js"></script>
+  <script src="plugins/slick-carousel/slick/slick.min.js"></script>
+  <script src="plugins/jquery-nice-select/js/jquery.nice-select.min.js"></script>
+  <script src="plugins/fancybox/jquery.fancybox.pack.js"></script>
+  <script src="plugins/smoothscroll/SmoothScroll.min.js"></script>
+ 
+  <script src="js/scripts.js"></script>
+
+</body>
+
+</html>
+
+
+
