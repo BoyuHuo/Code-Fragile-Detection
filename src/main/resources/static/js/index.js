@@ -31,7 +31,7 @@ function codeDetect() {
         success: function (data) {
             ajaxMessageReader(data, function (data) {
                 var resultBody = $("#result-body");
-                resultBody.clear();
+                resultBody.empty();
 
                 $.each(data["data"], function (key, value) {
                     let tr = "<tr>";
@@ -40,14 +40,14 @@ function codeDetect() {
                     let tdFileName = "<td> " + fileName + "</td>";
                     let tdFilePath = "<td>" + key + "</td>";
                     let tdValue = "<td>" + value + "</td>"
-                    let tdRisk = "Safe";
+                    let tdRisk = "<td>Safe</td>";
                     let value_float = parseFloat(value);
                     if (value_float <= 0.5) {
-                        tdRisk = "High";
+                        tdRisk = "<td>High</td>";
                     } else if (value_float <= 0.7) {
-                        tdRisk = "Medium";
+                        tdRisk = "<td>Medium</td>";
                     } else {
-                        tdRisk = "Low";
+                        tdRisk = "<td>Low</td>";
                     }
 
                     tr += tdFileName;

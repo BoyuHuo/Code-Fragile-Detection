@@ -24,7 +24,7 @@ public class VulController {
     @RequestMapping(method = RequestMethod.POST)
     public final Response uploadPicture(@RequestBody VulDto vulDto) {
 
-        long startTime = System.currentTimeMillis();
+         long startTime = System.currentTimeMillis();
 
         Response.Builder responseBuilder = Response.getBuilder();
 
@@ -39,8 +39,18 @@ public class VulController {
 
         // format return data
         Map<String, Object> returnData = new HashMap<>();
-        returnData.put("data", result.getData());
+       returnData.put("data", result.getData());
         returnData.put("eta", Long.toString(endTime-startTime));
+
+
+
+   /*
+        Map<String, Object> returnData = new HashMap<>();
+        Map data  = new HashMap<>();
+        data.put("D:\\asdfasdf.java",1);
+        returnData.put("data", data);
+        returnData.put("eta", 12);
+        Response.Builder responseBuilder = Response.getBuilder();*/
 
         return responseBuilder.setCode(Response.Code.SUCCESS)
                 .setData(returnData).build();
