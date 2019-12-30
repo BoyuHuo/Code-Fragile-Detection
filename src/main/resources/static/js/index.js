@@ -42,14 +42,11 @@ function codeDetect() {
                     let tdValue = "<td>" + value + "</td>"
                     let tdRisk = "<td>Safe</td>";
                     let value_float = parseFloat(value);
-                    if (value_float <= 0.5) {
-                        tdRisk = "<td>High</td>";
-                    } else if (value_float <= 0.7) {
-                        tdRisk = "<td>Medium</td>";
+                    if (value_float == 0) {
+                        tdRisk = "<td>Safe</td>";
                     } else {
-                        tdRisk = "<td>Low</td>";
+                        tdRisk = "<td>Risky</td>";
                     }
-
                     tr += tdFileName;
                     tr += tdFilePath;
                     tr += tdRisk;
