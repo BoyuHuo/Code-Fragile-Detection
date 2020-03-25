@@ -1,5 +1,6 @@
 package com.ocdl.client.controller;
 
+import com.ocdl.client.dto.ReturnDto;
 import com.ocdl.client.dto.VulDto;
 import com.ocdl.client.service.VulService;
 import com.ocdl.client.util.Response;
@@ -22,7 +23,7 @@ public class VulController {
 
     @ResponseBody
     @RequestMapping(method = RequestMethod.POST)
-    public final Response uploadPicture(@RequestBody VulDto vulDto) {
+    public final Response upload(@RequestBody VulDto vulDto) {
 
          long startTime = System.currentTimeMillis();
 
@@ -38,19 +39,7 @@ public class VulController {
         }
 
         // format return data
-        Map<String, Object> returnData = new HashMap<>();
-       returnData.put("data", result.getData());
-        returnData.put("eta", Long.toString(endTime-startTime));
-
-
-
-   /*
-        Map<String, Object> returnData = new HashMap<>();
-        Map data  = new HashMap<>();
-        data.put("D:\\asdfasdf.java",1);
-        returnData.put("data", data);
-        returnData.put("eta", 12);
-        Response.Builder responseBuilder = Response.getBuilder();*/
+        ReturnDto returnData = new ReturnDto(result.getData(), endTime-startTime);
 
         return responseBuilder.setCode(Response.Code.SUCCESS)
                 .setData(returnData).build();

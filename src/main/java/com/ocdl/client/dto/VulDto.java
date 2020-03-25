@@ -2,8 +2,9 @@ package com.ocdl.client.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.annotations.SerializedName;
+import lombok.Data;
 
-
+@Data
 public class VulDto {
 
     @JsonProperty("project_name")
@@ -21,4 +22,8 @@ public class VulDto {
     @JsonProperty("code_url")
     @SerializedName("code_url")
     private String codeUrl;
+
+    @JsonProperty("model_name")
+    @SerializedName("model_name")
+    private String modelName;
 }

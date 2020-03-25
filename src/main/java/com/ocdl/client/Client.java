@@ -18,12 +18,12 @@ public class Client {
   @Value("${models.path}")
   private String MODELBASEPATH;
 
-  @Value("${workspace.path}")
-  private String WORKSPACEPATH;
+//  @Value("${workspace.path}")
+//  private String WORKSPACEPATH;
 
   @Autowired private ConsumerService consumer;
 
-  public static String currentModelName = "unet_membrane.tflite";
+  public static String currentModelName = "owasp_randomForest_model.sav";
 
   public Client() {}
 
@@ -32,7 +32,7 @@ public class Client {
     logger.info("Client is running....");
 
     // run consumer in a separated thread
-    /*Client client = this;
+    Client client = this;
 
     (new Thread(
             new Runnable() {
@@ -42,10 +42,11 @@ public class Client {
                 consumer.run(client);
               }
             }))
-        .start();*/
+        .start();
   }
 
   public void downloadModel(String msg) {
+
     logger.info("waiting for download the latest model:");
     String[] modelInfo = msg.split("\\s+");
     if (modelInfo.length == 0) {
@@ -55,7 +56,7 @@ public class Client {
     String url = modelInfo[1].trim();
 
     try {
-      FileTool.downLoadFromUrl(url, modelName, Paths.get(WORKSPACEPATH, MODELBASEPATH).toString());
+      FileTool.downLoadFromUrl(url, modelName, Paths.get(MODELBASEPATH).toString());
       currentModelName = modelName;
       logger.info("download success!");
     } catch (IOException e) {

@@ -1,6 +1,7 @@
 package com.ocdl.client.service.impl;
 
 import com.google.gson.Gson;
+import com.ocdl.client.Client;
 import com.ocdl.client.dto.VulDto;
 import com.ocdl.client.service.HttpRequestService;
 import com.ocdl.client.service.VulService;
@@ -44,9 +45,7 @@ public class DefaultVulService implements VulService {
     @Override
     public Response predict(VulDto vulDto) {
 
-        String currentModelName = "owasp_randomForest_model.sav";
-
-        String modelPath = Paths.get(WORKSPACEPATH, MODELBASEPATH, currentModelName).toString();
+        String modelPath = Paths.get(MODELBASEPATH, Client.currentModelName).toString();
 
         String body = gson.toJson(vulDto);
         logger.info("Send request to Flask server: " + body);
