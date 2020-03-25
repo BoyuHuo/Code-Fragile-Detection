@@ -25,20 +25,8 @@ public class DefaultVulService implements VulService {
     @Value("${flask_sever_url}")
     private String FLASKSEVERURL;
 
-    @Value("${workspace.path}")
-    private String WORKSPACEPATH;
-
     @Value("${models.path}")
     private String MODELBASEPATH;
-
-    @Value("${pictures.path}")
-    private String PICBASEPATH;
-
-    @Value("${segmentation.path}")
-    private String SEGPICBASEPATH;
-
-    @Value("${ground.truth.path}")
-    private String GROUNDTRUTHBASEPATH;
 
     private Gson gson = new Gson();
 
