@@ -10,7 +10,7 @@ import java.io.*;
 @Service
 public class DefaultFileSaveService implements FileSaveService {
 
-  @Value("${pictures.path}")
+  //@Value("${pictures.path}")
   private String filePath;
 
   public String saveFile(MultipartFile file) {

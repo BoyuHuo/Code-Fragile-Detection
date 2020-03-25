@@ -34,7 +34,7 @@ public class DefaultVulService implements VulService {
     public Response predict(VulDto vulDto) {
 
         String modelPath = Paths.get(MODELBASEPATH, Client.currentModelName).toString();
-
+        vulDto.setModelPath(modelPath);
         String body = gson.toJson(vulDto);
         logger.info("Send request to Flask server: " + body);
         String response = httpRequestService.post(FLASKSEVERURL, body);

@@ -23,7 +23,7 @@ public class VulDto {
     @SerializedName("code_url")
     private String codeUrl;
 
-    @JsonProperty("model_name")
-    @SerializedName("model_name")
-    private String modelName;
+    @JsonProperty("model_path")
+    @SerializedName("model_path")
+    private String modelPath;
 }
