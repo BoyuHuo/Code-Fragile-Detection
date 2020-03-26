@@ -75,6 +75,7 @@ public class DefaultKafkaConsumerService implements ConsumerService {
 
     logger.info("starting kafka consumer...");
     System.out.println("starting kafka consumer...");
+    System.out.println(topic);
     this.consumer.subscribe(Arrays.asList(topic));
 
     while (true) {
