@@ -49,11 +49,11 @@ public class FileTool {
     String fPath = Paths.get(savePath, fileName).toString();
     if (fileName.endsWith(".zip")) {
       FileTool.unZipFiles(fPath, savePath);
-    }
 
-    // delete zip file, keep the unzip file
-    File zipFile = new File(fPath);
-    zipFile.delete();
+      // delete zip file, keep the unzip file
+      File zipFile = new File(fPath);
+      zipFile.delete();
+    }
 
     logger.info(url + " download success");
   }
