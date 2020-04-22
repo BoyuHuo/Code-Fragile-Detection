@@ -26,4 +26,12 @@ public class VulDto {
     @JsonProperty("model_path")
     @SerializedName("model_path")
     private String modelPath;
+
+    @JsonProperty("data")
+    @SerializedName("data")
+    private Object data;
+
+    @JsonProperty("create_at")
+    @SerializedName("create_at")
+    private String createAt;
 }

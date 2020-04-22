@@ -4,5 +4,5 @@ import java.io.File;
 
 public interface StorageService {
 
-  String uploadObjectAndGetUrl(String bucketName, String fileName, File file);
+  void uploadObject(String modelName, File file);
 }
