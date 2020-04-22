@@ -15,7 +15,7 @@ import java.io.File;
 public class S3Service implements StorageService {
 
     private static AmazonS3 s3client;
-    private static String bucketName = "vul-data";
+    private static String bucketName = "ocdl-tagged-data";
 
     private void createStorage() {
 
