@@ -9,7 +9,7 @@
         <module name="ls" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="8">
       <module name="ls" target="1.8" />
     </bytecodeTargetLevel>
   </component>

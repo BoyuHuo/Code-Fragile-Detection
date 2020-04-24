@@ -25,7 +25,7 @@ public class VulController {
     @Autowired
     private HttpRequestService httpRequestService;
 
-    @Value("${project.refid}")
+    @Value("${project.ref}")
     private String projectRefId;
 
     @Value("${project.recycle.path}")
