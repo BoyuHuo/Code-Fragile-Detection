@@ -77,6 +77,9 @@ function codeDetect() {
                 var resultBody = $("#result-body");
                 resultBody.empty();
 
+
+
+
                 $.each(data["data"], function(key, value) {
                     let tr = "<tr>";
                     let keyStr = key.split("/");
@@ -91,7 +94,7 @@ function codeDetect() {
                     } else {
                         tdRisk = "<td style='color:#dd6161'>YES</td>";
                     }
-                    let tdTag = "<input type='checkbox' id='" + key + "' name='tag' value='0'> <label for='vehicle1'> Risky</label><br>";
+                    let tdTag = "<td><input type='checkbox' id='" + key + "' name='tag' value='0'> <label for='vehicle1'> Risky</label><br></td>";
 
                     tr += tdFileName;
                     tr += tdFilePath;
