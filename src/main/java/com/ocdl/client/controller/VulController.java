@@ -31,7 +31,7 @@ public class VulController {
     @Value("${project.recycle.path}")
     private String recyclePath;
 
-    private Gson gson;
+    private Gson gson = new Gson();
 
     @ResponseBody
     @RequestMapping(method = RequestMethod.POST)
@@ -64,6 +64,7 @@ public class VulController {
     public final Response uploaddata(@RequestBody VulDto vulDto) {
 
         Response.Builder responseBuilder = Response.getBuilder();
+        vulDto.setProjectRefId(projectRefId);
         vulDto.setCreateAt(String.valueOf(System.currentTimeMillis()));
 
         String reply = httpRequestService.post(recyclePath, gson.toJson(vulDto));

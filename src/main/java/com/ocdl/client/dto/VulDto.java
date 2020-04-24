@@ -7,6 +7,10 @@ import lombok.Data;
 @Data
 public class VulDto {
 
+    @JsonProperty("ocdl_project_refid")
+    @SerializedName("ocdl_project_refid")
+    private String projectRefId;
+
     @JsonProperty("project_name")
     @SerializedName("project_name")
     private String projectName;
